@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Sostenibles | Apollo Sol Invictus</title>
+    <!-- Fuente Inter para emular San Francisco de Apple -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            scroll-behavior: smooth;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .apple-button {
+            background-color: #0071e3;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .apple-button:hover {
+            background-color: #0077ed;
+            transform: scale(1.02);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .hero-text {
+            letter-spacing: -0.022em;
+        }
+
+        footer {
+            background-color: #f5f5f7;
+            color: #86868b;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navegación -->
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between">
+            <div class="font-semibold text-lg tracking-tight">Apollo Sol Invictus</div>
+            <div class="space-x-8 text-sm opacity-80 hidden md:flex">
+                <a href="#" class="hover:text-blue-600 transition">Visión</a>
+                <a href="#" class="hover:text-blue-600 transition">Proyectos</a>
+                <a href="#donar" class="hover:text-blue-600 transition">Sostenibilidad</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Principal (Hero) -->
+    <main class="pt-24 pb-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="hero-text text-4xl md:text-6xl font-semibold mb-4 leading-tight">
+                Creando un futuro sostenible.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-500 mb-12 max-w-2xl mx-auto font-light">
+                Nuestra misión es transformar ideas en soluciones reales para el planeta. 
+                Mira nuestra última propuesta.
+            </p>
+
+            <!-- Contenedor del Video de Vimeo -->
+            <div class="video-container mb-16">
+                <iframe 
+                    src="https://player.vimeo.com/video/1166899081?h=21e25e9e04&color=0071e3&title=0&byline=0&portrait=0" 
+                    allow="autoplay; fullscreen; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Sección de Donación -->
+            <section id="donar" class="bg-white rounded-3xl p-8 md:p-16 shadow-sm border border-gray-100">
+                <h2 class="text-3xl font-semibold mb-6">Apoya nuestra causa</h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
+                    Cada contribución nos permite acelerar el desarrollo de tecnologías limpias 
+                    y proyectos de impacto social. Tu apoyo directo hace la diferencia.
+                </p>
+                
+                <div class="flex flex-col items-center">
+                    <!-- Botón de PayPal -->
+                    <!-- Nota: Reemplaza este enlace con tu URL de PayPal.Me o el ID de tu botón -->
+                    <a href="https://www.paypal.com/donate?hosted_button_id=TU_ID_AQUI" 
+                       target="_blank"
+                       class="apple-button px-10 py-4 rounded-full text-lg font-medium shadow-lg hover:shadow-xl inline-block mb-4">
+                        Donar con PayPal
+                    </a>
+                    <p class="text-xs text-gray-400 mt-4">
+                        Pago seguro procesado por PayPal. Contribuciones para Proyectos Sostenibles.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-gray-200">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs">
+            <p>© 2026 Apollo Sol Invictus Maximus. Todos los derechos reservados.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:underline">Política de Privacidad</a>
+                <a href="#" class="hover:underline">Términos de Servicio</a>
+                <a href="#" class="hover:underline">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Efecto suave de aparición al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            const main = document.querySelector('main');
+            main.style.opacity = 0;
+            main.style.transform = 'translateY(20px)';
+            main.style.transition = 'all 0.8s ease-out';
+            
+            setTimeout(() => {
+                main.style.opacity = 1;
+                main.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
